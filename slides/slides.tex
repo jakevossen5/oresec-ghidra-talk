@@ -86,16 +86,32 @@
 %\caption{\label{fig:your-figure}Caption goes here.}
 %\end{figure}
 
+\section{Theory}
 
-\subsection{Mathematics}
+\begin{frame}{What are the Goals of a compiler?}
+  \begin{itemize}
+    \item Take a programming language that is human-readable and
+      writable, into something that the computer can run.
+    \item Generally a program is considered compiled if it is in
+      assembly code - assembly to machine code is done by a
+      \textit{assembler}, not a compiler.
+    \item Three parts: parsing, type checking, and code generation [1]
+  \end{itemize}
+\end{frame}
 
-\begin{frame}{Readable Mathematics}
-
-Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i$$
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+\begin{frame}{Wait, how do decompilers work anyways? Or even a
+    compiler?}
+  \begin{itemize}
+    \item Option A: Compile down into another
+      language to be run. For example, the Python programming language
+      is writen in C. Programs that do this translation are often
+      called 'compiler compilers'.
+    \item Option B (generally better): Compiler the language in it's
+      own language, for example: Lisp, C, 
+  \end{itemize}
 
 \end{frame}
 
 \end{document}
+
+% [1] http://steve-yegge.blogspot.com/2007/06/rich-programmer-food.html
