@@ -86,7 +86,7 @@
 %\caption{\label{fig:your-figure}Caption goes here.}
 %\end{figure}
 
-\section{Theory}
+\section{Theory (a 10,000 foot overview)}
 
 \begin{frame}{What are the Goals of a compiler?}
   \begin{itemize}
@@ -95,7 +95,9 @@
     \item Generally a program is considered compiled if it is in
       assembly code - assembly to machine code is done by a
       \textit{assembler}, not a compiler.
-    \item Three parts: parsing, type checking, and code generation [1]
+    \item Three parts: parsing, type checking, and code
+      generation. [1]
+    \item Optionally, you can improve the efficency as you do this
   \end{itemize}
 \end{frame}
 
@@ -103,14 +105,29 @@
     compiler?}
   \begin{itemize}
     \item Option A: Compile down into another
-      language to be run. For example, the Python programming language
-      is writen in C. Programs that do this translation are often
-      called 'compiler compilers'.
-    \item Option B (generally better): Compiler the language in it's
-      own language, for example: Lisp, C, 
+      language to be run. GNU yacc and bison are intermediate
+      languages and parsers where you can define your new programming
+      language and generate machine code from it.
+    \item Option B (generally better): Compiler is written in the
+      language itself.
   \end{itemize}
-
 \end{frame}
+
+\begin{frame}{How are compilers born for language X?}
+  Problem: We want a compiler that can compile the compiler.
+
+  Solutions:
+  \begin{itemize}
+    \item Write a compiler for X in language Y. Now that we have an X
+      comipler, rewrite the compiler in X itself
+    \item Expand on an existing programming language and use it's compiler
+    \item Write the compiler in X, hand compile it, now you have a
+      compiler
+  \end{itemize}
+  So the very first compilers where written by hand in
+  assembly. 
+\end{frame}
+
 
 \end{document}
 
