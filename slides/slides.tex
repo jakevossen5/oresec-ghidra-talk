@@ -10,7 +10,7 @@
 
 \mode<presentation>
 {
-  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usetheme{metropolis}   % https://github.com/matze/mtheme
   \usecolortheme{default} % or try albatross, beaver, crane, ...
   \usefonttheme{default}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
@@ -45,7 +45,9 @@
   \item Generally is taking a piece of compiled software and analyzing
     it, revealing information about the source code
   \item Often used in security research, but also have implication in
-    game emulation and other areas of proprietary software.
+    game emulation and other areas of proprietary software
+  \item Also used to analyze malware to create figure out how to get
+    around ransomware and other attacks
 \end{itemize}
 
 \vskip 1cm
@@ -64,6 +66,18 @@
     \includegraphics[width=\textwidth]{ida-shipping.png}
     %% \caption{\label{fig:your-figure}Hex Rays Pricing}
   \end{figure}
+\end{frame}
+
+\begin{frame}{And Ghidra...}
+  \begin{itemize}
+    \item Free and open source - Apache 2.0 Licensed or Public Domain
+      (choice of contributor)
+      \url{https://github.com/NationalSecurityAgency/ghidra}
+    \item Has a lot better support for people working on teams then
+      IDA 
+    \item Security professionals are saying it rivals the
+      functionality of IDA
+  \end{itemize}
 \end{frame}
 
 % Commands to include a figure:
