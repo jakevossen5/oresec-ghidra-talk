@@ -86,7 +86,7 @@
 %\caption{\label{fig:your-figure}Caption goes here.}
 %\end{figure}
 
-\section{Theory (a 10,000 foot overview)}
+\section{Compiler Theory (a 10,000 foot overview)}
 
 \begin{frame}{What are the Goals of a compiler?}
   \begin{itemize}
@@ -97,7 +97,7 @@
       \textit{assembler}, not a compiler.
     \item Three parts: parsing, type checking, and code
       generation. [1]
-    \item Optionally, you can improve the efficency as you do this
+    \item Optionally, you can improve the efficiency as you do this
   \end{itemize}
 \end{frame}
 
@@ -119,15 +119,37 @@
   Solutions:
   \begin{itemize}
     \item Write a compiler for X in language Y. Now that we have an X
-      comipler, rewrite the compiler in X itself
+      compiler, rewrite the compiler in X itself
     \item Expand on an existing programming language and use it's compiler
     \item Write the compiler in X, hand compile it, now you have a
       compiler
   \end{itemize}
-  So the very first compilers where written by hand in
+  So the very first compilers where written \textbf{by hand} in
   assembly. 
 \end{frame}
 
+\section{Decompiler Theory (100,000 foot overview)}
+
+\begin{frame}{Why are decompilers are harder and more limited?}
+
+  People do their best, but decompiling is even harder than
+  compiling, which is already a really hard problem. Some of the
+  things that make it harder is:
+  
+  \begin{itemize}
+    \item Types are in the hidden, instead of being in plain text in
+      the language.
+    \item If something isn't formatted the way you want, you can't
+      just throw and error like compiling.
+    \item Output has to be human readable and clean, compared to
+      assembly which
+  \end{itemize}
+
+  Things like tail end recursion and stack/heap variable ranges are
+  just too difficult sometimes, so decompiling is not
+  perfect. Generally, it will result in ``equivalent'' code, not
+  necessarily the the original code.
+\end{frame}
 
 \end{document}
 
