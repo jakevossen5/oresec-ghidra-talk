@@ -143,12 +143,39 @@
       just throw and error like compiling.
     \item Output has to be human readable and clean, compared to
       assembly which
+    \item Exception handling
   \end{itemize}
 
   Things like tail end recursion and stack/heap variable ranges are
   just too difficult sometimes, so decompiling is not
   perfect. Generally, it will result in ``equivalent'' code, not
   necessarily the the original code.
+\end{frame}
+
+\begin{frame}{What are the steps decompilers take?}
+
+%  It is similar to the steps that a compiler takes in reverse, but
+%  that generates worse code, so some other steps are thrown in
+
+  \begin{itemize}
+    \item Generate microcode: a step between machine code and
+      assembly. This lets us do some optimization before we translate
+      further
+    \item Optimization: The microcode is verbose, so we need to clean
+      it up a bit. This is done at a local (inside a
+      function/subroutine) to a global level. This results in a more
+      readable end result.
+    \item Structural analysis: Look at our microcode and figure out
+      where we are looping, jumping, etc to create a control flow
+      graph
+    \item Pseudocode generation: Generate the output from the
+      optimization and structural analysis. After this is complete, we
+      also have to optimize and clean it up, as it still may be too
+      verbose.
+    \item Type analysis: Black magic analysis of the pseudocode
+  \end{itemize}
+
+  
 \end{frame}
 
 \end{document}
