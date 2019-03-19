@@ -1,2 +1,8 @@
 IDEL:/VitalSource Bookshelf
 IDEL:/WinHelloCPP.exe
+IADD:00000007:/pi-generator-from-blocks
+IDSET:/pi-generator-from-blocks:8a43ebf4ec7e151901823219121
+IDEL:/calculate-pi-a.out
+IDEL:/pi-generator-from-blocks
+IDEL:/evil-hangman
+IDEL:/digit_sum
