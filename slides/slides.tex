@@ -20,7 +20,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 
-\title[Ghidra]{An Introduction to Reverse Engineering}
+\title[Ghidra]{An Introduction to Reverse Engineering with Ghidra}
 \author{Jake Vossen}
 \institute{Colorado School of Mines - oresec}
 \date{2019-03-19}
@@ -30,8 +30,8 @@
   \begin{itemize}
     \item Install \texttt{ghidra} from AUR (yum, pacaur, yay, etc) or
       \url{https://ghidra-sre.org/} (requires Java)
-    \item Clone / download repo at \url{ghidra.vossen.dev} for
-      examples we will use later
+    \item Clone / download repo at
+\url{https://github.com/jakevossen5/oresec-ghidra-talk} for examples we will use later
     \end{itemize}
 \end{frame}
 \begin{frame}
@@ -108,8 +108,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Wait, how do decompilers work anyways? Or even a
-    compiler?}
+\begin{frame}{How do Compilers work?}
   \begin{itemize}
     \item Option A: Compile down into another
       language to be run. GNU yacc and bison are intermediate
@@ -205,7 +204,44 @@
       \item Accept the license
   \end{itemize}
 \end{frame}
+
+
+\section{Further Resources}
+
+\begin{frame}{Ghidra Resources}
+  \begin{itemize}
+    \item{ The Ghidra install folder contains a folder called docs
+        that has a presentation on getting started }
+    \item  {Hour long live stream of a security profressional going over his
+      thoughs on Ghidra live
+      \url{https://www.youtube.com/watch?v=285b_DEmvHY\&t=2406s}}
+    \item {Keyboard shoortcuts cheat sheet
+      \url{https://ghidra-sre.org/CheatSheet}}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Compiler Resources}
+  \begin{itemize}
+    \item Book: Compilers: Principles, Techniques, and Tools (2nd
+      Edition) \url{http://www.informit.com/store/compilers-principles-techniques-and-tools-9780321486813}
+    \item Wikipedia: History of Compiler Construction
+      \url{https://en.wikipedia.org/wiki/History_of_compiler_construction}
+    \item Wikipedia: Bootstrapping problem (compiling your own
+      compiler)
+      \url{https://en.wikipedia.org/wiki/Bootstrapping_(compilers)}
+    \item Blog post: good overview of compilers \url{http://steve-yegge.blogspot.com/2007/06/rich-programmer-food.html}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Decompiler resources}
+  \begin{itemize}
+    \item Stack overflow: How do decompilers work?
+      \url{https://stackoverflow.com/questions/10311189/how-does-decompiling-work}
+    \item Presentation: IDA Pro presentation on challenges of
+      decompiling
+      \url{http://www.hex-rays.com/products/ida/support/ppt/decompilers_and_beyond.ppt}
+  \end{itemize}
+\end{frame}
+
 \end{document}
 
-% [1] http://steve-yegge.blogspot.com/2007/06/rich-programmer-food.html
-% [2] https://code.nsa.gov/
